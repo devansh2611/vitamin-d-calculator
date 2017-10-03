@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        
+
+        <title>
+            
+            
+                Vitamin D Calculator
+            
+        </title>
+
+        <meta name="title" content="Vitamin D3">
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="referrer" content="no-referrer-when-downgrade">
+        <meta name="generator" content="">
+        <base href="http://vitamind3.kinderuntersuchungen.de">
+        
+        
+        
+        <meta property="og:title" content="Vitamin D3">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="http://vitamind3.kinderuntersuchungen.de">
+        
+        
+
+        
+
+        <link rel="canonical" href="http://vitamind3.kinderuntersuchungen.de/">
+        <link href="http://vitamind3.kinderuntersuchungen.de/index.xml" rel="alternate" type="application/rss+xml" title="Vitamin D3">
+        <link rel="stylesheet" href="http://vitamind3.kinderuntersuchungen.de/styles/main.css" type="text/css">
+        
+        
+        
+    </head>
+
+    <body>
+        
+
+        
+        <header class="row middle-xs center-xs">
+            <div class="col-xs-12"><img src="/images/logo_4.png" alt="Vitamin D3"></div>            
+            <nav class="row middle-xs center-xs">
+                <div class="col-xs-6 col-sm-1 logo">
+                    <a href="http://vitamind3.kinderuntersuchungen.de"><img src="/images/logo_4s.png" alt="Vitamin D3"></a>
+                </div>
+
+                <div class="col-xs-3 col-sm-2"><h3><a href="/#information">Information</a></h3></div>
+
+                <div class="col-xs-3 col-sm-2"><h3><a href="/#calculator">Calculator</a></h3></div>
+
+                <div class="col-xs-3 col-sm-2"><h3><a href="/#about">About</a></h3></div>
+
+                <div class="col-xs-6 col-sm-1 nav-toggle">
+                    <a href="" class="nav-icon" onclick="return false"><img src="/images/icon-menu.png" alt="Open Menu"><img src="/images/icon-x.png" alt="Close Menu" style="display: none;"></a>
+                </div>
+            </nav>
+        </header>
+        
+
+        <section class="nav-full row middle-xs center-xs">
+            <div class="col-xs-12">
+                <div class="row middle-xs center-xs">
+                    
+                    <div class="col-xs-12"><h1><a href="/#information">Information</a></h1></div>
+                    
+                    <div class="col-xs-12"><h1><a href="/#calculator">Calculator</a></h1></div>
+                    
+                    <div class="col-xs-12"><h1><a href="/#about">About</a></h1></div>
+                    
+                </div>
+            </div>
+        </section>
+        <main>
+
+
+
+
+<section class="about" id="calculator">
+    <div class="container middle-xs">
+        <div class="row center-xs">
+            <div class="col-xs-12"><h1>Calculator</h1></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 middle-xs">
+            <div ng-app="myApp" ng-controller="formCtrl">
+              <form novalidate>
+                  
+                <span style="font-size: xx-large">Required input for maintain level therapy</span>
+                  
+                <span style="font-size: larger"><br>Body weight:<br></span>
+                
+                <input type="number" ng-model="user.weight"><br>                  
+                  <span style="font-size: larger">Daily vitamin D3 doses
+                  <br>Vitamin D3 doses / body weight (in IE/kg)<br></span>
+                
+                <input type="number" ng-model="user.perkgdosis">
+                <h3><span style="color: green">Calculated daily vitamin D3 doses: </span><span style=" border: 5px solid green;">{{(user.weight * user.perkgdosis * (user.weight/70)) | number:0}} IE</span>
+                </h3>           
+                <br>
+                <span style="font-size: larger">Daily vitamin K2 doses<br> Vitamin D2 doses / body weight (in IE/kg)<br></span>
+                 
+                  <input type="number" ng-model="user.perkgdosisk2"><br> 
+                  <h3><span style="color: green">Calculated daily vitamin K2 doses:</span> <span style=" border: 5px solid green;">{{user.weight * user.perkgdosisk2}} µg</span></h3>
+                  <br><br>
+                  <span style="font-size: xx-large">Required input for initial doses therapy</span>
+                  <span style="font-size: larger"><br>
+                      Goal vitamin D3 level in ng/ml:<br></span>
+                <input type="number" ng-model="user1.goalLevel"><br>
+                Current vitamin D3 level ng/ml:<br> 
+                <input type="number" ng-model="user1.currentLevel"><br>
+                   <h3>
+                       <span style="color: green">Calculated initial doses: </span><span style=" border: 5px solid green;">{{(user1.goalLevel-user1.currentLevel)*10000 | number:0}} IE </span>
+                  </h3>
+                  <br>
+                Note: 10.000 IE/day rises the level by 1 ng/ml<br>
+                Suggestion: a maximum of 10.000 IE/day should be taken. Otherwise please consult your physician.
+                <br><br>
+                  
+                The daily vitamin values were calculated with correction formula using the following value (Body weight/70):
+                {{user.weight/70 | number:2}}<br><br>             
+                <button ng-click="reset()">Reset</button>
+              </form>
+                <br/>
+                    Formula based on information from:  <a href="http://www.vitamind.net/dosierung/">http://www.vitamind.net/dosierung/</a> 
+            </div>
+            </div>
+        </div>
+
+    </div>
+                
+</section>
+
+
+<section class="blog" id="information">
+    <div class="container">
+        <div class="row center-xs">
+            <div class="col-xs-12"><h1>Information</h1></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 posts-list">
+                
+                    <article>
+                        <h2>About Vitamin D</h2>
+                        <div class=sub-header>
+                          October 1, 2017
+                        </div>
+                        <p>Vitamin D is known to be important for the human body. There are many benefits of not having a vitamin D deficit, which is supported by many research documents in the domain. However, vitamin D3 is supposed to be more <a href="https://academic.oup.com/jcem/article-lookup/doi/10.1210/jc.2004-0360">efficient</a> in humans than vitamin D2. <br>
+                            Thus, this site is providing a calculator for the right vitamin D3 doses, when a vitamin D3 supplement is intended.  </p>
+                    </article>
+                
+                    <article>
+                        <h2>Vitamin D3 Calculator</h2>
+                        <div class=sub-header>
+                          October 2, 2017
+                        </div>
+                        <p>
+                            The goal of the calculator is to help identify the right vitamin D3 and vitamin K2 doses. This is done based on providing input data related to the current bodyweight and the current vitamin D3 level. 
+                            <br>
+                            The calculator is set to use a guide value of 50 IE/kg 
+                        </p>
+                    </article>
+                
+                    <article>
+                        <h2>Vitamin D Deficiency</h2>
+                        <div class=sub-header>
+                          October 3, 2017
+                        </div>
+                        <p>
+                            
+                        </p>
+                    </article>
+                
+            </div>
+        </div>        
+    </div>
+</section>
+
+<section class="contact" id="about">
+    <div class="container">
+        <div class="row center-xs">
+            <div class="col-xs-12"><h1>About</h1></div>
+            <article class="entry-content">
+                The goal of the site is to provide a simple to use vitamin D3 calculator. In case you have any questions related to the calculator, please contact us using the form below.
+            </article>
+        </div>
+        <div class="row center-xs">
+        <div class="col-xs-12"><h1>Disclaimer</h1></div>
+            <article class="entry-content">
+                The calculator provides a guide to calculate the right vitamin D3 and vitamin D2 doses. This is just a guide. For a plan, please consult medical personnel. Please note, vitamin D3 should be checked periodically by blood tests.
+            </article>
+         </div>     
+        <div class="row center-xs">
+            <div class="col-xs-12"><h1>Email us</h1></div>
+        </div>        
+        <form id="form-contact" action="https://formspree.io/norbert.tothgati@sofiplan.de" method="POST">
+            <div class="row center-xs">
+                <div class="col-xs-12 col-sm-6"><input type="text" name="name" placeholder="Name" required></div>
+                <div class="col-xs-12 col-sm-6"><input type="email" name="email" placeholder="Email" required></div>
+                <div class="col-xs-12"><input type="text" name="_subject" placeholder="Subject" required></div>
+                <div class="col-xs-12"><textarea name="message" placeholder="Message" required></textarea></div>
+                <input type="text" name="_gotcha" style="display:none">
+                <input type="hidden" name="_next" value="/">
+                <div class="col-xs-6" id="form-submit"><input type="submit" value="Send"></div>
+                <div class="col-xs-12" id="form-thankyou" style="display:none;">Thanks for your email!</div>
+            </div>
+        </form>
+    </div>
+</section>
+
+        </main>
+        <footer class="row middle-xs center-xs">
+             <span style="color:white"> 2017 © Sunshine vitamin D calculator</span>
+            <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+            
+            <script src="/scripts/index.js" type="text/javascript"></script>
+            
+            
+            <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.10.0/highlight.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+            <script>
+                var app = angular.module('myApp', []);
+                app.controller('formCtrl', function($scope) {
+                $scope.master = {firstName:"", weight:0, perkgdosis:50, perkgdosisk2:2};
+                $scope.reset = function() {
+                    $scope.user = angular.copy($scope.master);  
+                };
+                $scope.reset();
+                });
+            </script>            
+        </footer>
+              
+    </body>
+</html>
+
