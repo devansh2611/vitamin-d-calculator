@@ -11,11 +11,13 @@
         </title>
 
 
-<meta name="Description" content="A simple to use vitamin D calculator.  The goal of the calculator is to help identify the right vitamin D3 and vitamin K2 doses. This is done based on providing input data related to the current body weight and the current vitamin D3 level. ">
-<meta name="Keywords" content="vitamin, vitamin D, vitamin D3, vitamin K2, vitamin D deficit, 10.000 IU, sunlight, depression, vitamin calculator, vitamin D2">
+        <meta name="Description" content="A simple to use vitamin D calculator.  The goal of the calculator is to help identify the right vitamin D3 and vitamin K2 doses. This is done based on providing input data related to the current body weight and the current vitamin D3 level. ">
+        <meta name="Keywords" content="vitamin, vitamin D, vitamin D3, vitamin K2, vitamin D deficit, 10.000 IU, sunlight, depression, vitamin calculator, vitamin D2">
         
         <meta name="title" content="Vitamin D3 Calculator">
-
+	    <meta name="author" content="Sofiplan Gmbh">
+	    <meta name="publisher" content="Sofiplan Gmbh">
+	    <meta name="copyright" content="www.sofiplan.de/">
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="chrome=1">
         <meta name="HandheldFriendly" content="True">
@@ -101,13 +103,13 @@
                 
                 <input type="number" ng-model="user.weight"><br>                  
                   <span style="font-size: larger">Daily vitamin D3 doses
-                  <br>Vitamin D3 doses / body weight (in IE/kg)<br></span>
+                  <br>Vitamin D3 doses / body weight (in IU/kg)<br></span>
                 
                 <input type="number" ng-model="user.perkgdosis">
-                <h3><span style="color: green">Calculated daily vitamin D3 doses: </span><span style=" border: 5px solid green;">{{(user.weight * user.perkgdosis * (user.weight/70)) | number:0}} IE</span>
+                <h3><span style="color: green">Calculated daily vitamin D3 doses: </span><span style=" border: 5px solid green;">{{(user.weight * user.perkgdosis * (user.weight/70)) | number:0}} IU</span>
                 </h3>           
                 <br>
-                <span style="font-size: larger">Daily vitamin K2 doses<br> Vitamin D2 doses / body weight (in IE/kg)<br></span>
+                <span style="font-size: larger">Daily vitamin K2 doses<br> Vitamin D2 doses / body weight (in IU/kg)<br></span>
                  
                   <input type="number" ng-model="user.perkgdosisk2"><br> 
                   <h3><span style="color: green">Calculated daily vitamin K2 doses:</span> <span style=" border: 5px solid green;">{{user.weight * user.perkgdosisk2}} µg</span></h3>
@@ -119,11 +121,11 @@
                 Current vitamin D3 level ng/ml:<br> 
                 <input type="number" ng-model="user1.currentLevel"><br>
                    <h3>
-                       <span style="color: green">Calculated initial doses: </span><span style=" border: 5px solid green;">{{(user1.goalLevel-user1.currentLevel)*10000 | number:0}} IE </span>
+                       <span style="color: green">Calculated initial doses: </span><span style=" border: 5px solid green;">{{(user1.goalLevel-user1.currentLevel)*10000 | number:0}} IU </span>
                   </h3>
                   <br>
-                Note: 10.000 IE/day rises the level by 1 ng/ml<br>
-                Suggestion: a maximum of 10.000 IE/day should be taken. Otherwise please consult your physician.
+                Note: 10.000 IU/day rises the level by 1 ng/ml<br>
+                Suggestion: a maximum of 10.000 IU/day should be taken. Otherwise please consult your physician.
                 <br><br>
                   
                 The daily vitamin values were calculated with correction formula using the following value (Body weight/70):
@@ -166,7 +168,7 @@
                         <p>
                             The goal of the calculator is to help identify the right vitamin D3 and vitamin K2 doses. This is done based on providing input data related to the current bodyweight and the current vitamin D3 level. 
                             <br>
-                            The calculator is set to use a guide value of 50 IE/kg 
+                            The calculator is set to use a guide value of 50 IU/kg 
                         </p>
                     </article>
                 
